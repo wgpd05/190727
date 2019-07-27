@@ -21,12 +21,13 @@ Lab: Client 與 Server 透過 WebSocket 雙向即時連線
 2.  建立 WebSocket 伺服端程式
 
 
-2.0	以記事本開啟 c:\php\php.ini，搜尋 ;extension=php_sockets.dll
+2.0	以記事本開啟 C:\xampp\php\php.ini，搜尋 ;extension=sockets
 	將開頭的 ; 註解字元去除:
-extension=php_sockets.dll
+extension=sockets
 
 
-2.1 在本資料夾建立一個新的 PHP 檔案，檔名: WebSocket_Server.php，內容如下:
+2.1 在 Lab_WebSocket 資料夾建立一個新的 PHP 檔案，
+    檔名: WebSocket_Server.php，內容如下:
 
 <?php
 require_once ('./websockets.php');
@@ -52,12 +53,11 @@ try {
 ?>
 
 
-2.2 啟動「命令提示字元」，以 CD 指令切換工作目錄，例如:
-    CD \apache\htdocs\Lab\Lab_WebSocket
+2.2 滑鼠右鍵 Lab_WebSocket 資料夾 | Open in Terminal
 
 
 2.3 繼續輸入下列指令，以 PHP 執行 WebSocket_Server.php
-    c:\php\php WebSocket_Server.php
+    php WebSocket_Server.php
 
 <Note>如果出現防火牆通知，請允許通過。
 
@@ -65,7 +65,8 @@ try {
 3.  建立 WebSocket 用戶端程式
 
 
-3.1 在本資料夾建立一個新的 PHP 檔案，檔名: WebSocket_Client.php，內容如下:
+3.1 在 Lab_WebSocket 資料夾建立一個新的 PHP 檔案，
+    檔名: WebSocket_Client.php，內容如下:
 
 <!DOCTYPE html>
 <html>
